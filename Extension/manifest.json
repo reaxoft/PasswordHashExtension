@@ -1,0 +1,33 @@
+{
+    "name" : "PasswrodHash",
+    "version" : "1.0.0.0",
+    "description" : "Ask password and calculate its hash",
+    "author": "Reaxoft",
+
+    "background": {
+      "scripts": [ "background.js" ],
+      "persistent": true
+   },
+
+    "default_locale": "en_US",
+     
+    "content_scripts": [
+        {
+          "matches": ["*://*/passwordHash*"],
+          "js": ["content.js"],
+          "run_at": "document_end"
+        }
+    ],
+
+    "permissions": [
+        "*://*/passwordHash*",
+        "nativeMessaging",
+        "activeTab"
+    ],
+
+    "icons": {
+         "16": "icon_16.png",
+         "48": "icon_48.png",
+        "128": "icon_128.png"
+    }
+}
