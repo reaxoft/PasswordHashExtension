@@ -1,1 +1,1 @@
-"# PasswordHashExtension" 
+# PasswordHashExtension
